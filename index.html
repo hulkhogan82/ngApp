@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Simple HTML</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body class="light-theme">
+  <div ng-app="myApp" ng-controller="myCtrl as c">
+    <p>Name : <input type="text" ng-model="name"></p>
+    <h1>Hello {{c.testName}} and {{name}}</h1>
+    <h1>{{firstName + ' ' + lastName}}</h1>
+    <my-html-directive></my-html-directive>    
+    <br>
+    <span>{{c.verbiage}}</span>
+    <br>
+    {{c.priceMatrix}}
+  </div>
+  <div>
+    <h1>Task List</h1>
+    <p id="msg">Current tasks:</p>
+    <ul>
+      <li class="list">Add visual styles</li>
+      <li class="list">Add light and dark themes</li>
+      <li>Enable switching the theme</li>
+    </ul>
+    <div>
+      <button class="btn">Dark</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+  <noscript>You need to enable JavaScript to view the full site.</noscript>
+</body>
+
+</html>
