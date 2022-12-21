@@ -18,8 +18,40 @@
     <span>{{c.verbiage}}</span>
     <br>
     {{c.priceMatrix}}
-  </div>
+    <br> <br>
+    <span>c.priceMatrixCount: {{c.priceMatrix.length}}</span><br>
+    <span>c.priceMatrixObjectCount: {{Object.keys(c.priceMatrixObj)}}</span><br>
+    <span>priceMatrixObj2: {{c.priceMatrixObj2}}</span><br>
+    <span>priceMatrixObj2: {{Object.keys(c.priceMatrixObj2).length}} </span>
+
+    <ul>
+      <li ng-repeat="person in people">
+        <label>
+            {{person.name}}
+            <input type="radio" ng-model="myObj.person" name="sameName" ng-value="person" />
+        </label>
+      </li>
+    </ul>
+
+    <div>Radio Demo</div>
+    Selected radio is {{c.selectedContact}}
+    <div ng-repeat="phone in c.phones">
+      {{phone}}
+      <input type="radio" name="{{phone.type}}" value="{{phone.value}}" ng-model="c.selectedContact"/>
+      <label>{{phone.value}}</label>
+    </div>
+    <span class="buttons-flex">
+      <button name="Continue">Continue</button>
+      <button name="Cancel">Cancel</button>      
+    </span>
   <div>
+      <span>Test Span Text: Hello {{c.testName}}</span>
+    </div>
+  <div>
+    <!-- Angular app ends-->
+  </div>
+  <br/>
+    <div class="square">test sq</div>
     <h1>Task List</h1>
     <p id="msg">Current tasks:</p>
     <ul>
